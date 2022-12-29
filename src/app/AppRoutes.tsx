@@ -8,8 +8,8 @@ const AppRoutes: React.FC = () => (
     <BrowserRouter>
       <Switch>
         <Route
-          path={ROUTES.HOMEPAGE}
-          component={React.lazy(() => import('../app/features/Homepage'))}
+          path={ROUTES.FEATURES}
+          component={React.lazy(() => import('./features/Features'))}
         />
       </Switch>
     </BrowserRouter>
