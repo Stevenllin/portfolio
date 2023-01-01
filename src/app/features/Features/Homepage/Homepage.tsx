@@ -1,10 +1,9 @@
 import React from 'react';
-import FileSaver from 'file-saver';
+import commonService from 'app/core/services/commonService';
 
 const Homepage: React.FC = () => {
   const handleClickDownloadPDF = () => {
-    // const file = require('assets/files/Steven.pdf');
-    FileSaver.saveAs('/resume/Steven.pdf', 'Steven.pdf');
+    commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
   };
   return (
     <>
