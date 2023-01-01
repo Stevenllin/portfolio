@@ -58,13 +58,17 @@ nisi ut aliquip ex ea commodo a</p>
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6">
                   <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
                 </div>
-                <div className="col-6">
-                  <div className="h-100 d-flex align-items-end flex-column">
+                <div className="col-md-6">
+                  <div className="h-100 d-flex align-items-end flex-column py-2">
                     <p className="fs-36">Project Name</p>
-                    <p className="fs-24">Lorem ipsum dolor sit amet, consectetur adip  eiusmod tempor incididunt ut labore et dolore</p>
+                    <div className="fs-24 my-2">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adip  eiusmod tempor incididunt ut labore et dolore
+                      </p>
+                    </div>
                     <button className="button-orange mt-auto">Link</button>
                   </div>
                 </div>
@@ -72,13 +76,17 @@ nisi ut aliquip ex ea commodo a</p>
             </div>
             <div className="carousel-item">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6">
                   <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
                 </div>
-                <div className="col-6">
-                  <div className="h-100 d-flex align-items-end flex-column">
+                <div className="col-md-6">
+                  <div className="h-100 d-flex align-items-end flex-column py-2">
                     <p className="fs-36">Project Name</p>
-                    <p className="fs-24">Lorem ipsum dolor sit amet, consectetur adip  eiusmod tempor incididunt ut labore et dolore</p>
+                    <div className="fs-24 my-2">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adip  eiusmod tempor incididunt ut labore et dolore
+                      </p>
+                    </div>
                     <button className="button-orange mt-auto">Link</button>
                   </div>
                 </div>
@@ -86,11 +94,11 @@ nisi ut aliquip ex ea commodo a</p>
             </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="carousel-control-prev-icon font-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="carousel-control-next-icon font-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
