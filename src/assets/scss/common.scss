@@ -2,6 +2,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+$base_color: #FF602E;
+
 p {
   font-weight: lighter;
   margin-bottom: 0px !important;
@@ -9,6 +11,39 @@ p {
 
 button {
   all: unset;
+}
+
+ul,
+li {
+  font-size: 12px;
+  color: #737373;
+  font-weight: lighter;
+  list-style: none;
+
+  @media screen and (min-width: 769px) {
+    font-size: 24px;
+  }
+}
+
+ul {
+  margin: 0px !important;
+  padding: 0px !important;
+  display: flex;
+}
+
+li {
+  padding: 2px 5px;
+  margin: 0 2px;
+  cursor: pointer;
+
+  @media screen and (min-width: 769px) {
+    padding: 10px 20px;
+    margin: 0 5px;  }
+}
+
+li.selected {
+  color: $base_color;
+  border-bottom: 1.5px solid $base_color;
 }
 
 .button-white-outline {
@@ -20,7 +55,7 @@ button {
   border-radius: 8px;
 
   &:hover {
-    color: #FF602E;
+    color: $base_color;
   }
   
   @media screen and (min-width: 769px) {
@@ -36,7 +71,7 @@ button {
   padding: 4px 18px;
   font-weight: lighter;
   font-size: 12px;
-  background-color: #FF602E;
+  background-color: $base_color;
   color: white;
   border-radius: 6px;
 
@@ -75,6 +110,7 @@ button {
 
 .fs-36 {
   font-size: 14px;
+
   @media screen and (min-width: 769px) {
     font-size: 28px;
   }
@@ -89,7 +125,7 @@ button {
 }
 
 .color-orange {
-  color: #FF602E;
+  color: $base_color;
 }
 
 .color-white {
@@ -110,30 +146,48 @@ button {
 .section-header {
   font-size: 14px;
   padding: 3px 16px;
-  border-bottom: 2px solid #FF602E;
+  border-bottom: 2px solid $base_color;
 
   @media screen and (min-width: 769px) {
     font-size: 36px;
     padding: 12px 36px;
-    border-bottom: 3px solid #FF602E;
+    border-bottom: 3px solid $base_color;
   }
 }
 
 .container-1 {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
 
   @media screen and (min-width: 769px) {
-    padding-top: 60px;
+    padding-top: 20px;
     padding-bottom: 60px;
   }
 }
 
 .container-2 {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 769px) {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+}
+
+.skills-container {
+  padding: 10px 20px;
+  font-weight: lighter;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  @media screen and (min-width: 769px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .w-80 {
@@ -146,17 +200,17 @@ button {
 
   @media screen and (min-width: 769px) {
     height: 32px !important;
-  width: 32px !important;
+    width: 32px !important;
   }
 }
 
 .carousel-control-next-icon {
-  margin-right: -250%;
+  margin-right: -200%;
   background-image: url('../icon/right-arrow.png') !important;
 }
 
 .carousel-control-prev-icon {
-  margin-left: -250%;
+  margin-left: -200%;
   background-image: url('../icon/left-arrow.png') !important;
 }
     

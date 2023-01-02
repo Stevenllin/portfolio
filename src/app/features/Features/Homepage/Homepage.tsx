@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import commonService from 'app/core/services/commonService';
+import { motion, AnimatePresence } from "framer-motion";
+import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
+import { SkillsOption } from 'app/core/defines/Homepage';
+import { SkillsDataState } from './types';
+import { SkillsData } from './Data';
 
 const Homepage: React.FC = () => {
+  /* Skills State */
+  const [skillsDataState, setSkillsDataState] = useState<SkillsDataState[]>([]);
+  const [selectedSkills, setSelectedSkills] = useState<SkillsDataState>(SkillsData[0]);
+
+  console.log('selectedSkills', selectedSkills);
+
+  useEffect(() => {
+    (async () => {
+      /* initialize the skills */
+      setSkillsDataState(SkillsData);
+    })();
+  },[]);
+
+  /**
+   * @description handle download the resume
+  */
   const handleClickDownloadPDF = () => {
     commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
+  };
+
+  /**
+   * @description handle select the skills
+   * @param target the index of skills data
+  */
+  const handleSelectSkills = (target: number) => {
+    const skillsDataUpdate = skillsDataState?.map((item, index) => {
+      if (target === index) {
+        const updated = { ...item, isSelected: true };
+        setSelectedSkills(updated);
+        return { ...item, isSelected: true };
+      } else {
+        return { ...item, isSelected: false };
+      }
+    });
+    setSkillsDataState(skillsDataUpdate);
   };
   return (
     <>
@@ -45,6 +83,56 @@ nisi ut aliquip ex ea commodo a</p>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Skills */}
+      <div className="container-1">
+        <div className="d-flex justify-content-center mb-3">
+          <div className="section-header">
+            Skills
+          </div>
+        </div>
+        <ul>
+          {
+            SkillsOption.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className={skillsDataState[index]?.isSelected ? 'selected' : ''}
+                  onClick={() => handleSelectSkills(index)}
+                >
+                  {item.text}
+                </li>
+              )
+            })
+          }
+        </ul>
+        {
+          selectedSkills && (
+          <AnimatePresence exitBeforeEnter>
+            <motion.div
+              key={selectedSkills?.category}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="skills-container">
+                {
+                  selectedSkills.itemArray.map((item, index) => (
+                    <div key={index}>
+                      <CircleProgressbar
+                        text={item.item}
+                        value={item.score}
+                      />
+                    </div>
+                  ))
+                }
+              </div>
+            </motion.div>
+          </AnimatePresence>
+          )
+        }
       </div>
 
       {/* Side project */}
