@@ -11,8 +11,6 @@ const Homepage: React.FC = () => {
   const [skillsDataState, setSkillsDataState] = useState<SkillsDataState[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<SkillsDataState>(SkillsData[0]);
 
-  console.log('selectedSkills', selectedSkills);
-
   useEffect(() => {
     (async () => {
       /* initialize the skills */
@@ -48,11 +46,23 @@ const Homepage: React.FC = () => {
       {/* Banner */}
       <div className="w-100 banner-container">
         <div className="banner-text w-100 h-100 text-center">
+          <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
             <p className="fs-24 color-white">Hello!!</p>
             <p className="fs-48 color-white">I am a <span className="color-orange">Front-end developer</span></p>
+          </motion.div>
+          <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
             <button className="button-white-outline" onClick={handleClickDownloadPDF}>
               Resume
             </button>
+          </motion.div>
         </div>
         <img
           className="w-100"
