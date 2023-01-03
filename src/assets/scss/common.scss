@@ -40,14 +40,20 @@ li {
   margin: 0 2px;
   cursor: pointer;
 
+  &:hover {
+    color: $base_color;
+  }
+
   @media screen and (min-width: 769px) {
     padding: 10px 20px;
-    margin: 0 5px;  }
+    margin: 0 5px; 
+  }
 }
 
 li.selected {
   color: $base_color;
   border-bottom: 1.5px solid $base_color;
+  
 }
 
 .button-white-outline {
@@ -90,6 +96,11 @@ li.selected {
   position: relative;
   background: #454545;
   overflow: hidden;
+
+  .banner-nav {
+    position: absolute;
+    z-index: 1;
+  }
 
   .banner-text {
     position: absolute;
@@ -194,8 +205,8 @@ li.selected {
   }
 }
 
-.w-80 {
-  width: 80%;
+.w-60 {
+  width: 60%;
 }
 
 .font-icon {
@@ -217,4 +228,37 @@ li.selected {
   margin-left: -200%;
   background-image: url('../icon/left-arrow.png') !important;
 }
-    
+
+.vertical-line-right {
+  position: absolute;
+  left: 50%;
+  border-left: 2px solid $base_color;
+  min-height: 30px;
+
+  @media screen and (min-width: 769px) {
+    border-left: 3px solid $base_color;
+  }
+}
+
+.experience-date {
+  padding: 10px 20px;
+  font-weight: lighter;
+  background-color: #11215C;
+  color: white;
+  border-radius: 8px;
+
+  @media screen and (min-width: 769px) {
+    border-radius: 15px;
+  }
+}
+
+// .vertical-line-left {
+//   position: absolute;
+//   right: 50%;
+//   border-left: 2px solid $base_color;
+//   min-height: 30px;
+
+//   @media screen and (min-width: 769px) {
+//     border-left: 3px solid $base_color;
+//   }
+// }

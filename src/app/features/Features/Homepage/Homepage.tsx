@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import commonService from 'app/core/services/commonService';
 import { motion, AnimatePresence } from "framer-motion";
 import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
-import { SkillsOption } from 'app/core/defines/Homepage';
+import { SkillsOption, NavigationOption } from 'app/core/defines/Homepage';
 import { SkillsDataState } from './types';
 import { SkillsData } from './Data';
 
@@ -45,6 +45,25 @@ const Homepage: React.FC = () => {
     <>
       {/* Banner */}
       <div className="w-100 banner-container">
+        <motion.nav
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="p-2 banner-nav w-100 d-flex justify-content-end"
+        >
+          <ul>
+            {
+              NavigationOption.map((item, index) => (
+                <li
+                  key={index}
+                  className="fs-24 color-white"
+                >
+                  {item.text}
+                </li>
+              ))
+            }
+          </ul>
+        </motion.nav>
         <div className="banner-text w-100 h-100 text-center">
           <motion.div
             initial={{ y: 10, opacity: 0 }}
@@ -82,12 +101,12 @@ const Homepage: React.FC = () => {
           <div className="row">
             <div className="col-6">
               <img
-                className="w-80"
+                className="w-60"
                 src={require('assets/image/S__15106057.jpg')}
                 alt="steven"
               />
             </div>
-            <div className="col-6">
+            <div className="d-flex align-items-center col-6">
               <p className="fs-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris
 nisi ut aliquip ex ea commodo a</p>
             </div>
@@ -143,6 +162,24 @@ nisi ut aliquip ex ea commodo a</p>
           </AnimatePresence>
           )
         }
+      </div>
+
+      {/* Experience */}
+      <div className="section-gray">
+        <div className="container-1 p-2">
+          <div className="d-flex justify-content-center">
+            <div className="section-header">
+              Experience
+            </div>
+          </div>
+          <div className="vertical-line-right"/>
+          <div className="row">
+            <div className="col-6 p-4 vertical-line-right">
+              <div className="experience-date fs-24">Nov 2022 - Now (TW)</div>
+            </div>
+            <div className="col-6 p-4"><p className="fs-24">Front-end developer</p></div>
+          </div>
+        </div>
       </div>
 
       {/* Side project */}
