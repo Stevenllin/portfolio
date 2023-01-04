@@ -3,8 +3,8 @@ import commonService from 'app/core/services/commonService';
 import { motion, AnimatePresence } from "framer-motion";
 import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
 import { SkillsOption, NavigationOption } from 'app/core/defines/Homepage';
-import { SkillsDataState } from './types';
-import { SkillsData } from './Data';
+import { SkillsDataState, InterestsDataState } from './types';
+import { SkillsData, InterestsData } from './Data';
 
 const Homepage: React.FC = () => {
   /* Skills State */
@@ -172,12 +172,18 @@ nisi ut aliquip ex ea commodo a</p>
               Experience
             </div>
           </div>
-          <div className="vertical-line-right"/>
-          <div className="row">
-            <div className="col-6 p-4 vertical-line-right">
-              <div className="experience-date fs-24">Nov 2022 - Now (TW)</div>
+          <div className="row fs-24">
+            <div className="col-6">
+              <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-center experience-date">Nov 2022 - Now (TW)</div>
+              </div>
+              <p className="experience-text">Responsible for the case of Bank Taiwan Life Insurance</p>
             </div>
-            <div className="col-6 p-4"><p className="fs-24">Front-end developer</p></div>
+            <div className="col-6 vertical-line">
+              <p className="experience-title">Front-end developer</p>
+              {/* <p className="experience-text">Responsible for the case of Bank Taiwan Life Insurance</p> */}
+              {/* <div className="d-flex justify-content-center experience-date">Nov 2022 - Now (TW)</div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -236,6 +242,35 @@ nisi ut aliquip ex ea commodo a</p>
             <span className="carousel-control-next-icon font-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
+        </div>
+      </div>
+
+      {/* Interests */}
+      <div className="section-gray">
+        <div className="container-1 p-2">
+          <div className="d-flex justify-content-center mb-3">
+            <div className="section-header">
+              Interests
+            </div>
+          </div>
+          <div className="row">
+            {
+              InterestsData.map((item: InterestsDataState, index) => {
+                return (
+                  <div key={index} className="col-6 col-md-4 col-lg-2">
+                    <div className="d-flex justify-content-between align-items-center flex-column interests-card shadow mb-4 p-4">
+                      <div className="d-flex justify-content-center p-2">
+                        <img className="interests-image" src={`${item.location}.png`} alt={item.item}/>
+                      </div>
+                      <div className="fs-24 p-2">
+                        {item.item}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </>

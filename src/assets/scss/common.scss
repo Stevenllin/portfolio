@@ -115,7 +115,7 @@ li.selected {
 }
 
 .fs-24 {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: lighter;
 
   @media screen and (min-width: 769px) {
@@ -148,14 +148,7 @@ li.selected {
 }
 
 .section-gray {
-  margin-top: 20px;
-  margin-bottom: 20px;
   background-color: #F2F2F2;
-
-  @media screen and (min-width: 769px) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
 }
 
 .section-header {
@@ -241,24 +234,79 @@ li.selected {
 }
 
 .experience-date {
-  padding: 10px 20px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  max-height: 30px;
+  max-width: 150px;
   font-weight: lighter;
   background-color: #11215C;
   color: white;
   border-radius: 8px;
-
+  
   @media screen and (min-width: 769px) {
+    padding: 10px 20px;
+    max-height: 60px;
+    margin-top: 50px;
+    margin-right: 50px;
+    max-width: 300px;
     border-radius: 15px;
   }
 }
 
-// .vertical-line-left {
-//   position: absolute;
-//   right: 50%;
-//   border-left: 2px solid $base_color;
-//   min-height: 30px;
+.experience-title {
+  font-weight: normal;
+  padding-left: 10px;
+  padding-top: 10px;
+  
+  @media screen and (min-width: 769px) {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+}
 
-//   @media screen and (min-width: 769px) {
-//     border-left: 3px solid $base_color;
-//   }
-// }
+.experience-text {
+  padding-left: 10px;
+  
+  @media screen and (min-width: 769px) {
+    padding-left: 50px;
+  }
+}
+
+.vertical-line {
+  border-left: 2px solid $base_color;
+
+  @media screen and (min-width: 769px) {
+    border-left: 3px solid $base_color;
+  }
+}
+
+.col-6 {
+  padding: 0px;
+}
+
+.interests-card {
+  min-height: 180px;
+  background-color: white;
+  border-radius: 8px;
+  
+  @media screen and (max-width: 576px) {
+    max-height: 150px;
+  }
+
+  @media screen and (min-width: 769px) {
+    min-height: 250px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    min-height: 200px;
+  }
+
+  @media screen and (min-width: 1800px) {
+    min-height: 300px;
+  }
+}
+
+.interests-image {
+  width: 80%;
+}

@@ -25,3 +25,9 @@ export interface Projects {
   purpose: string;
   url: string;
 }
+
+export interface InterestsDataState {
+  item: string;
+  location: string;
+  description: string;
+}
