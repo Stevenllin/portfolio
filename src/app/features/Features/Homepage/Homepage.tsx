@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import commonService from 'app/core/services/commonService';
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView, InView } from "react-intersection-observer";
 import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
 import { SkillsOption, NavigationOption } from 'app/core/defines/Homepage';
 import { SkillsDataState, InterestsDataState } from './types';
@@ -99,17 +100,37 @@ const Homepage: React.FC = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-6">
-              <img
-                className="w-60"
-                src={require('assets/image/S__15106057.jpg')}
-                alt="steven"
-              />
-            </div>
-            <div className="d-flex align-items-center col-6">
-              <p className="fs-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris
-nisi ut aliquip ex ea commodo a</p>
-            </div>
+              <div className="col-6">
+                <InView threshold={0.5}>
+                  {({ref, inView}) => (
+                    <motion.img
+                      ref={ref}
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={inView ? { opacity: 1, x: 100 } : { opacity: 0, x: -100 }}
+                      transition={{ duration: 0.8 }}
+                      className="w-60"
+                      src={require('assets/image/S__15106057.jpg')}
+                      alt="steven"
+                    />
+                  )}
+                </InView>
+              </div>
+              <div className="d-flex align-items-center col-6">
+                <InView threshold={0.5}>
+                  {({ ref, inView }) => (
+                    <motion.p
+                      ref={ref}
+                      className="fs-24"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={inView ? { opacity: 1, x: -100 } : { opacity: 0, x: 100 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo a
+                    </motion.p>
+                  )}
+                </InView>
+              </div>
           </div>
         </div>
       </div>
