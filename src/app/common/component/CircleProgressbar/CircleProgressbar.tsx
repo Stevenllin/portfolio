@@ -3,7 +3,7 @@ import { CircleProgressbarProps } from './types';
 
 const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
   return (
-    <div>123</div>
+    <div className="font-style-3">123</div>
   )
 }
 

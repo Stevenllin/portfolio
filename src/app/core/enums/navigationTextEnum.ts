@@ -4,10 +4,10 @@ export enum NavigationTextEnum {
   About = 'About me',
   /* skills */
   Skills = 'Skills',
-  /* experiences */
-  Experiences = 'Experiences',
   /* projects */
   Projects = 'Projects',
+  /* experiences */
+  Services = 'Services',
   /* interests */
-  Interests = 'Interests'
+  Contact = 'Contact'
 }
