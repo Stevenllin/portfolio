@@ -4,6 +4,7 @@ import { SkillsDataState } from './types';
 import { SkillsData } from '../../Data';
 import { motion, AnimatePresence } from "framer-motion";
 import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
+import Dash from 'app/common/component/Icon/Dash';
 
 const Skills: React.FC = () => {
   /* Skills State */
@@ -35,7 +36,9 @@ const Skills: React.FC = () => {
   return (
     <div className="skills-container">
       <div className="d-flex">
-        <div className="line" />
+        <div className="d-flex align-items-center me-3 fc-2">
+          <Dash />
+        </div>
         <p className="font-style-1">Discover</p>
       </div>
       <p className="font-style-2">What can I do</p>

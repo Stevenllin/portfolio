@@ -1,12 +1,18 @@
 import React from 'react';
+import Dash from 'app/common/component/Icon/Dash';
 
 const Projects: React.FC = () => {
   return (
     <div className="skills-container">
       <div className="d-flex justify-content-end">
-        <div className="d-flex">
-          <div className="line" />
-          <p className="font-style-1">Discover</p>
+        <div className="d-block">
+          <div className="d-flex d-flex justify-content-end">
+            <p className="fs-sm fc-2 fw-lighter me-3">Checkout</p>
+            <div className="d-flex align-items-center fc-2">
+              <Dash />
+            </div>
+          </div>
+          <p className="font-style-2 fw-lighter">my <span className="fs-md fc-1 fw-light">Side Projects</span></p>
         </div>
       </div>
       <div className="w-80">
