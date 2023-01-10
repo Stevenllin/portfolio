@@ -39,9 +39,9 @@ const Skills: React.FC = () => {
         <div className="d-flex align-items-center me-3 fc-2">
           <Dash />
         </div>
-        <p className="font-style-1">Discover</p>
+        <p className="fs-sm fc-2 fw-lighter">Checkout</p>
       </div>
-      <p className="font-style-2">What can I do</p>
+      <p className="fs-sm fc-2 fw-lighter">the <span className="fs-md fc-1 fw-light">Skills</span> I have</p>
       <ul className="d-flex">
         {
           SkillsOption.map((item, index) => {
@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
                 className={skillsDataState[index]?.isSelected ? 'skills-select selected' : 'skills-select'}
                 onClick={() => handleSelectSkills(index)}
               >
-                <p className="font-style-3">{item.text}</p>
+                <p className="fs-sm">{item.text}</p>
               </li>
             )
           })

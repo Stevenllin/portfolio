@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
               <Dash />
             </div>
           </div>
-          <p className="font-style-2 fw-lighter">my <span className="fs-md fc-1 fw-light">Side Projects</span></p>
+          <p className="fs-sm fc-2 fw-lighter">the <span className="fs-md fc-1 fw-light">Side Projects</span> I have created</p>
         </div>
       </div>
       <div className="w-80">
@@ -28,30 +28,30 @@ const Projects: React.FC = () => {
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
                     <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
-                    <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
-                    <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>
@@ -63,30 +63,30 @@ const Projects: React.FC = () => {
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
-                    <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
-                    <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="projects-card">
                     <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="font-style-3">Lorem ipsum dolor sit amet consectet</p>
-                    <div className="d-flex">
-                      <button className="button-gold me-1">Live Demo</button>
-                      <button className="button-outline-gold ms-1">Git hub</button>
+                    <p className="fs-xs fc-2 fw-lighter my-2">Lorem ipsum dolor sit amet consectet</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
                     </div>
                   </div>
                 </div>

@@ -17,24 +17,28 @@ body {
 
 ul {
   margin: 0px !important;
+  padding: 0px !important;
 }
 
 ul,
 li {
-  font-size: 12px;
-  padding: 20px;
+  padding: 10px;
   color: $color_white;
   font-weight: lighter;
   list-style: none;
-
+  
   @media screen and (min-width: 769px) {
-    font-size: 36px;
+    margin: 15px;
   }
 }
 
 p {
   margin: 0px !important;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+
+  @media screen and (min-width: 576px) {
+    letter-spacing: 2px;
+  }
 }
 
 button {
@@ -43,21 +47,45 @@ button {
 /* Html tag */
 
 /* common */
-.w-80 {
+.w-90 {
   width: 90% !important;
   margin: 0 auto;
 }
 
 .fs-xs {
-  font-size: 24px;
+  font-size: 12px;
+
+  @media screen and (min-width: 769px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .fs-sm {
-  font-size: 28px;
+  font-size: 14px;
+
+  @media screen and (min-width: 769px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 28px;
+  }
 }
 
 .fs-md {
-  font-size: 36px;
+  font-size: 18px;
+
+  @media screen and (min-width: 769px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 
 .fs-lg {
@@ -70,23 +98,6 @@ button {
 
 .fc-2 {
   color: $color_white;
-}
-
-.font-style-1 {
-  font-size: 28px;
-  color: $color_gold;
-  font-weight: lighter;
-}
-
-.font-style-2 {
-  font-size: 36px;
-  color: $color_white;
-}
-
-.font-style-3 {
-  font-size: 24px;
-  color: $color_white;
-  font-weight: lighter;
 }
 
 .button-gold {
@@ -113,10 +124,37 @@ button {
 }
 
 .space {
-  height: 150px;
+  height: 60px;
+
+  @media screen and (min-width: 769px) {
+    height: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 150px;
+  }
+}
+
+.display-desktop {
+  @media screen and (max-width: 769px) {
+    display: none !important;
+  }
+}
+
+.display-mobile {
+  @media screen and (min-width: 769px) {
+    display: none !important;
+  }
 }
 
 /* common */
+
+/* Navigation */
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* Navigation */
 
 /* Banner */
 .banner-container {
@@ -136,9 +174,25 @@ button {
   font-weight: lighter;
   position: absolute;
   top: 40%;
-  left: 65%;
+  left: 25%;
   z-index: 1;
   letter-spacing: 3px;
+
+  @media screen and (min-width: 576px) {
+    left: 40%;
+  }
+  
+  @media screen and (min-width: 769px) {
+    left: 50%;
+  }
+
+  @media screen and (min-width: 992px) {
+    left: 60%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 60%;
+  }
 }
 /* Banner */
 
@@ -155,8 +209,17 @@ button {
 .about-data {
   width: 100%;
   border-radius: 20px;
-  min-height: 200px;
+  min-height: 150px;
   background-color: $base_background_dark;
+
+  @media screen and (min-width: 1200px) {
+    min-height: 200px;
+  }
+
+  @media screen and (min-width: 1500px) {
+    min-height: 300px;
+  }
+
 }
 /* About */
 
@@ -214,57 +277,6 @@ button {
 }
 /* Services */
 
-
-// li {
-//   padding: 2px 5px;
-//   margin: 0 2px;
-//   cursor: pointer;
-
-//   &:hover {
-//     color: $base_color;
-//   }
-
-//   @media screen and (min-width: 769px) {
-//     padding: 10px 20px;
-//     margin: 0 5px; 
-//   }
-// }
-
-// li.selected {
-//   color: $base_color;
-//   border-bottom: 1.5px solid $base_color;
-  
-// }
-
-
-// .section-header {
-//   font-size: 14px;
-//   padding: 3px 16px;
-//   border-bottom: 2px solid $base_color;
-
-//   @media screen and (min-width: 769px) {
-//     font-size: 36px;
-//     padding: 12px 36px;
-//     border-bottom: 3px solid $base_color;
-//   }
-// }
-
-
-// .skills-container {
-//   padding: 10px 20px;
-//   font-weight: lighter;
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-  
-//   @media screen and (min-width: 769px) {
-//     grid-template-columns: repeat(6, 1fr);
-//   }
-// }
-
-// .w-60 {
-//   width: 60%;
-// }
-
 // .font-icon {
 //   height: 14px !important;
 //   width: 14px !important;
@@ -283,21 +295,4 @@ button {
 // .carousel-control-prev-icon {
 //   margin-left: -200%;
 //   background-image: url('../icon/left-arrow.png') !important;
-// }
-
-// .vertical-line-right {
-//   position: absolute;
-//   left: 50%;
-//   border-left: 2px solid $base_color;
-//   min-height: 30px;
-
-//   @media screen and (min-width: 769px) {
-//     border-left: 3px solid $base_color;
-//   }
-// }
-
-
-
-// .col-6 {
-//   padding: 0px;
 // }
