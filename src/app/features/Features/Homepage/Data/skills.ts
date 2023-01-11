@@ -5,8 +5,7 @@ export const SkillsData = [
     category: 'Front-end',
     isSelected: true,
     itemArray: [
-      { item: 'HTML', score: 75 },
-      { item: 'CSS', score: 75 },
+      { item: 'HTML/CSS', score: 75 },
       { item: 'JavaScript', score: 65 },
       { item: 'TypeScript', score: 45 },
       { item: 'ReactJS', score: 65 },

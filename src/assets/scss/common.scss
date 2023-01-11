@@ -44,6 +44,12 @@ p {
 button {
   all: unset;
 }
+
+canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 /* Html tag */
 
 /* common */
@@ -181,6 +187,19 @@ button {
   }
 }
 
+.chart-container {
+  position: relative;
+  padding: 20px;
+
+  @media screen and (min-width: 769px) {
+    padding: 10px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 20px;
+  }
+}
+
 /* common */
 
 /* Navigation */
@@ -288,7 +307,6 @@ button {
 }
 
 .skills-grid {
-  padding: 10px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   

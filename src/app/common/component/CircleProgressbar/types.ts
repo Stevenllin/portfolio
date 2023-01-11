@@ -1,6 +1,6 @@
 export interface CircleProgressbarProps {
   text: string;
-  value: number|string;
+  value: number;
 }
 
 // export interface CircleProgressbarProviderProps {
