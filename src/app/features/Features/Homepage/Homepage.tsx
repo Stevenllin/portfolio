@@ -1,5 +1,4 @@
 import React from 'react';
-import commonService from 'app/core/services/commonService';
 import Navigation from 'app/common/layouts/Navigation';
 import Banner from './Section/Banner';
 import About from './Section/About';
@@ -12,12 +11,6 @@ import Services from './Section/Services';
 
 
 const Homepage: React.FC = () => {
-  /**
-   * @description handle download the resume
-  */
-  const handleClickDownloadPDF = () => {
-    commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
-  };
 
   return (
     <>

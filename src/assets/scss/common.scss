@@ -102,9 +102,19 @@ button {
 
 .button-gold {
   padding: 10px 20px;
+  max-width: 100px;
   background-color: $color_gold;
   color: $color_white;
   border-radius: 5px;
+
+  @media screen and (min-width: 769px) {
+    padding: 7px 14px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 10px 20px;
+    max-width: 150px;
+  }
 }
 
 .button-outline-gold {
@@ -112,6 +122,14 @@ button {
   background-color: transparent;
   color: $color_gold;
   border-radius: 5px;
+
+  @media screen and (min-width: 769px) {
+    padding: 7px 14px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 10px 20px;
+  }
 }
 
 .line {
@@ -135,13 +153,29 @@ button {
   }
 }
 
+.line-height {
+  line-height: 1rem;
+  
+  @media screen and (min-width: 769px) {
+    line-height: 1.5rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    line-height: 2.5rem;
+  }
+}
+
 .display-desktop {
+  position: relative;
+
   @media screen and (max-width: 769px) {
     display: none !important;
   }
 }
 
 .display-mobile {
+  position: relative;
+
   @media screen and (min-width: 769px) {
     display: none !important;
   }
@@ -200,6 +234,7 @@ button {
 .about-container {
   width: 90%;
   margin: 0 auto;
+  
 
   & img {
     border-radius: 15px;
@@ -219,7 +254,16 @@ button {
   @media screen and (min-width: 1500px) {
     min-height: 300px;
   }
+}
 
+.about-data-text {
+  position: absolute;
+  height: 30%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 /* About */
 
@@ -239,6 +283,7 @@ button {
 .skills-select.selected {
   p {
     color: $color_gold;
+    font-weight: normal;
   } 
 }
 
@@ -260,7 +305,7 @@ button {
 }
 .projects-card {
   padding: 20px;
-  min-height: 350px;
+  min-height: 200px;
   background-color: $base_background_dark;
   border-radius: 15px;
 

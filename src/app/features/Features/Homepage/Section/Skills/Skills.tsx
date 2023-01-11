@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
         <p className="fs-sm fc-2 fw-lighter">Checkout</p>
       </div>
       <p className="fs-sm fc-2 fw-lighter">the <span className="fs-md fc-1 fw-light">Skills</span> I have</p>
-      <ul className="d-flex">
+      <ul className="d-flex mt-4">
         {
           SkillsOption.map((item, index) => {
             return (

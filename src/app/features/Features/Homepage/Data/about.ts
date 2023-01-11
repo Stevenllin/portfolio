@@ -1,13 +1,13 @@
 /* About */
-export const About = [
+export const AboutData = [
   {
-    item: 'work experience',
-    number: '2 years'
+    item: 'Experience',
+    number: '2+ years'
   }, {
-    item: 'projects',
-    number: '5'
+    item: 'Projects',
+    number: '5+'
   }, {
-    item: 'interests',
-    number: '7'
+    item: 'Interests',
+    number: '7+'
   }
 ]
