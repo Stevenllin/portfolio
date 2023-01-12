@@ -5,13 +5,13 @@ export const SkillsData = [
     category: 'Front-end',
     isSelected: true,
     itemArray: [
-      { item: 'HTML/CSS', score: 75 },
+      { item: 'HTML/CSS', score: 80 },
       { item: 'JavaScript', score: 65 },
-      { item: 'TypeScript', score: 45 },
+      { item: 'TypeScript', score: 55 },
       { item: 'ReactJS', score: 65 },
       { item: 'Bootstrap', score: 75 },
       { item: 'MaterialUI', score: 30 },
-      { item: 'SCSS', score: 50 }
+      { item: 'SCSS', score: 60 }
     ]
   },
   /* Back-end */
@@ -31,7 +31,7 @@ export const SkillsData = [
     category: 'Others',
     isSelected: false,
     itemArray: [
-      { item: 'Git', score: 55 },
+      { item: 'Git', score: 65 },
       { item: 'Figma', score: 60 },
       { item: 'Postman', score: 35 },
       { item: 'Socket.io', score: 20 },

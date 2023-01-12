@@ -6,7 +6,6 @@ import { CircleProgressbarProps } from './types';
 Chart.register(ArcElement);
 const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
   console.log('props', props);
-  console.log(props.value)
   const rest = 100 - props.value;
   const data = {
     datasets: [
@@ -16,8 +15,10 @@ const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
           "#D6AC86",
           "#282A29"
         ],
+        borderRadius: 50,
         borderWidth: [0, 0, 0, 0],
-        display: true
+        display: true,
+        cutout: '80%'
       }
     ]
   };
@@ -35,7 +36,6 @@ const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
                 enabled: false
               }
             },
-            maintainAspectRatio: true,
             responsive: true
           }}
         />
