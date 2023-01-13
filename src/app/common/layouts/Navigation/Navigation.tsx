@@ -1,22 +1,28 @@
 import React from 'react';
 import { NavigationOption } from 'app/core/defines/Homepage';
+import { motion } from "framer-motion";
 
 const Navigation: React.FC = () => {
   return (
-    <div className="nav-container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.25 }}
+      className="nav-container"
+    >
       <ul className="d-flex">
       {
         NavigationOption.map((item, index) => (
           <li
             key={index}
-            className="fs-sm fc-2 fw-lighter"
+            className="fs-xs fc-2 fw-lighter"
           >
             {item.text}
           </li>
         ))
       }
-    </ul>
-    </div>
+      </ul>
+    </motion.div>
   );
 }
 

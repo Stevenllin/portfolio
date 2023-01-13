@@ -5,7 +5,6 @@ import { CircleProgressbarProps } from './types';
 
 Chart.register(ArcElement);
 const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
-  console.log('props', props);
   const rest = 100 - props.value;
   const data = {
     datasets: [
@@ -42,7 +41,7 @@ const CircleProgressbar: React.FC<CircleProgressbarProps> = (props) => {
           <div
             style={{
               position: "absolute",
-              top: "55%",
+              top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
               textAlign: "center"

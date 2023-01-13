@@ -50,6 +50,21 @@ canvas {
   width: 100% !important;
 }
 
+svg {
+  width: 16px;
+  height: 16px;
+
+  @media screen and (min-width: 769px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 /* Html tag */
 
 /* common */
@@ -59,7 +74,7 @@ canvas {
 }
 
 .fs-xs {
-  font-size: 12px;
+  font-size: 10px;
 
   @media screen and (min-width: 769px) {
     font-size: 16px;
@@ -71,7 +86,7 @@ canvas {
 }
 
 .fs-sm {
-  font-size: 14px;
+  font-size: 12px;
 
   @media screen and (min-width: 769px) {
     font-size: 20px;
@@ -83,7 +98,7 @@ canvas {
 }
 
 .fs-md {
-  font-size: 18px;
+  font-size: 16px;
 
   @media screen and (min-width: 769px) {
     font-size: 24px;
@@ -263,7 +278,7 @@ canvas {
 .about-data {
   width: 100%;
   border-radius: 20px;
-  min-height: 150px;
+  min-height: 135px;
   background-color: $base_background_dark;
 
   @media screen and (min-width: 1200px) {
@@ -277,7 +292,7 @@ canvas {
 
 .about-data-text {
   position: absolute;
-  height: 30%;
+  height: 50%;
   top: 0;
   right: 0;
   bottom: 0;

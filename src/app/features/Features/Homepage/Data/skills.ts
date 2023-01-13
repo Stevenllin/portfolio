@@ -6,8 +6,7 @@ export const SkillsData = [
     isSelected: true,
     itemArray: [
       { item: 'HTML/CSS', score: 80 },
-      { item: 'JavaScript', score: 65 },
-      { item: 'TypeScript', score: 55 },
+      { item: 'JS/TS', score: 65 },
       { item: 'ReactJS', score: 65 },
       { item: 'Bootstrap', score: 75 },
       { item: 'MaterialUI', score: 30 },

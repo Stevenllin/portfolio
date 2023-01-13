@@ -3,8 +3,9 @@ import { SkillsOption } from 'app/core/defines/Homepage';
 import { SkillsDataState } from './types';
 import { SkillsData } from '../../Data';
 import { motion, AnimatePresence } from "framer-motion";
+import { InView } from "react-intersection-observer";
 import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
-import Dash from 'app/common/component/Icon/Dash';
+import Icon from 'app/common/component/icon/Icon';
 
 const Skills: React.FC = () => {
   /* Skills State */
@@ -35,13 +36,25 @@ const Skills: React.FC = () => {
     };
   return (
     <div className="skills-container">
-      <div className="d-flex">
-        <div className="d-flex align-items-center me-3 fc-2">
-          <Dash />
-        </div>
-        <p className="fs-sm fc-2 fw-lighter">Checkout</p>
-      </div>
-      <p className="fs-sm fc-2 fw-lighter">the <span className="fs-md fc-1 fw-light">Skills</span> I have</p>
+      <InView threshold={0.25}>
+        {({ref, inView}) => (
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: -100 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="d-flex">
+              <div className="d-flex align-items-center me-3 fc-2">
+                <Icon name="Dash" />
+              </div>
+              <p className="d-flex align-items-center fs-sm fc-2 fw-lighter">Checkout</p>
+            </div>
+            <p className="fs-sm fc-2 fw-lighter">the <span className="fs-md fc-1 fw-light">Skills</span> I have</p>
+          </motion.div>
+        )}
+      </InView>
+
       <ul className="d-flex mt-4">
         {
           SkillsOption.map((item, index) => {

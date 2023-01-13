@@ -7,7 +7,6 @@ import Projects from './Section/Projects';
 import Services from './Section/Services';
 // import { motion, AnimatePresence } from "framer-motion";
 // import { InView } from "react-intersection-observer";
-// import CircleProgressbar from 'app/common/component/CircleProgressbar/CircleProgressbar';
 
 
 const Homepage: React.FC = () => {
@@ -31,52 +30,6 @@ const Homepage: React.FC = () => {
       {/* Services */}
       <Services />
       <div className="space" />
-
-      {/* <div className="w-100 banner-container">
-        <motion.nav
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="p-2 banner-nav w-100 d-flex justify-content-end"
-        >
-          <ul>
-            {
-              NavigationOption.map((item, index) => (
-                <li
-                  key={index}
-                  className="fs-24 color-white"
-                >
-                  {item.text}
-                </li>
-              ))
-            }
-          </ul>
-        </motion.nav>
-        <div className="banner-text w-100 h-100 text-center">
-          <motion.div
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <p className="fs-24 color-white">Hello!!</p>
-            <p className="fs-48 color-white">I am a <span className="color-orange">Front-end developer</span></p>
-          </motion.div>
-          <motion.div
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
-            <button className="button-white-outline" onClick={handleClickDownloadPDF}>
-              Resume
-            </button>
-          </motion.div>
-        </div>
-        <img
-          className="w-100"
-          src={require('assets/image/S__15122444.jpg')}
-          alt="banner"
-        />
-      </div> */}
 
       {/* About me */}
       {/* <div className="section-gray">
