@@ -27,8 +27,9 @@ const Projects: React.FC = () => {
           )}
         </InView>
       </div>
-      <div className="w-80">
-        <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
+      <div className="w-90 mt-4">
+        {/* Desktop */}
+        <div id="projectControls" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
@@ -100,15 +101,17 @@ const Projects: React.FC = () => {
               </div>
             </div>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+          <button className="carousel-control-prev" type="button" data-bs-target="#projectControls" data-bs-slide="prev">
             <span className="carousel-control-prev-icon font-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+          <button className="carousel-control-next" type="button" data-bs-target="#projectControls" data-bs-slide="next">
             <span className="carousel-control-next-icon font-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
+        {/* mobile */}
+        
       </div>
     </div>
   );

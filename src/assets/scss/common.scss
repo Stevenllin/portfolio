@@ -7,6 +7,11 @@ $base_background_light: #282A29;
 $base_background_dark: #2C2E2D;
 $color_gold: #D6AC86;
 $color_white: #FFFFFF;
+$small: 576px;
+$medium: 769px;
+$large: 992px;
+$larger: 1200px;
+$largest: 1500px;
 /* Variable */
 
 /* Html tag */
@@ -27,7 +32,7 @@ li {
   font-weight: lighter;
   list-style: none;
   
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     margin: 15px;
   }
 }
@@ -36,7 +41,7 @@ p {
   margin: 0px !important;
   letter-spacing: 1px;
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $small) {
     letter-spacing: 2px;
   }
 }
@@ -54,12 +59,12 @@ svg {
   width: 16px;
   height: 16px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     width: 24px;
     height: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     width: 36px;
     height: 36px;
   }
@@ -76,11 +81,11 @@ svg {
 .fs-xs {
   font-size: 10px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     font-size: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     font-size: 24px;
   }
 }
@@ -88,11 +93,11 @@ svg {
 .fs-sm {
   font-size: 12px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     font-size: 20px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     font-size: 28px;
   }
 }
@@ -100,11 +105,11 @@ svg {
 .fs-md {
   font-size: 16px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     font-size: 24px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     font-size: 36px;
   }
 }
@@ -128,11 +133,11 @@ svg {
   color: $color_white;
   border-radius: 5px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     padding: 7px 14px;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $large) {
     padding: 10px 20px;
     max-width: 150px;
   }
@@ -144,11 +149,11 @@ svg {
   color: $color_gold;
   border-radius: 5px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     padding: 7px 14px;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $large) {
     padding: 10px 20px;
   }
 }
@@ -165,11 +170,11 @@ svg {
 .space {
   height: 60px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     height: 100px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     height: 150px;
   }
 }
@@ -177,11 +182,11 @@ svg {
 .line-height {
   line-height: 1rem;
   
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     line-height: 1.5rem;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $large) {
     line-height: 2.5rem;
   }
 }
@@ -189,7 +194,7 @@ svg {
 .display-desktop {
   position: relative;
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: $medium) {
     display: none !important;
   }
 }
@@ -197,7 +202,7 @@ svg {
 .display-mobile {
   position: relative;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     display: none !important;
   }
 }
@@ -206,13 +211,21 @@ svg {
   position: relative;
   padding: 20px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     padding: 10px;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $large) {
     padding: 20px;
   }
+}
+
+.carousel-control-next-icon {
+  margin-right: -160%;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -160%;
 }
 
 /* common */
@@ -246,19 +259,19 @@ svg {
   z-index: 1;
   letter-spacing: 3px;
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $small) {
     left: 40%;
   }
   
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     left: 50%;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: $large) {
     left: 60%;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     left: 60%;
   }
 }
@@ -281,11 +294,11 @@ svg {
   min-height: 135px;
   background-color: $base_background_dark;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $larger) {
     min-height: 200px;
   }
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: $largest) {
     min-height: 300px;
   }
 }
@@ -309,6 +322,7 @@ svg {
 
 .skills-select {
   cursor: pointer;
+
   p {
     color: #F5DEC8;
   } 
@@ -325,7 +339,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: $medium) {
     grid-template-columns: repeat(6, 1fr);
   }
 }
@@ -336,6 +350,7 @@ svg {
   width: 90%;
   margin: 0 auto;
 }
+
 .projects-card {
   padding: 20px;
   min-height: 200px;
@@ -353,24 +368,63 @@ svg {
   width: 90%;
   margin: 0 auto;
 }
+
+.service-card {
+  width: 75%;
+  padding: 20px;
+  background-color: $base_background_dark;
+  border-radius: 15px;
+
+  @media screen and (min-width: $small) {
+    padding: 30px;
+  }
+  
+  @media screen and (min-width: $medium) {
+    padding: 40px;
+  }
+
+  @media screen and (min-width: $large) {
+    padding: 50px;
+  }
+
+  @media screen and (min-width: $larger) {
+    padding: 80px;
+  }
+}
+
+.service-divider {
+  margin: 0 auto;
+  height: 1px;
+  width: 10%;
+  border-bottom: 2px solid $color_gold;
+  
+  @media screen and (min-width: $medium) {
+    border-bottom: 3px solid $color_gold;
+  }
+}
+
+.service-carousel {
+  position: relative;
+}
+
+.service-indicators {
+  position: absolute;
+  top: 100%;
+
+  @media screen and (min-width: $large) {
+    top: 120%;
+  }
+}
+
+.service-indicators-button {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 1px !important;
+  border-radius: 100% !important;
+
+  @media screen and (min-width: $large) {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
 /* Services */
-
-// .font-icon {
-//   height: 14px !important;
-//   width: 14px !important;
-
-//   @media screen and (min-width: 769px) {
-//     height: 32px !important;
-//     width: 32px !important;
-//   }
-// }
-
-// .carousel-control-next-icon {
-//   margin-right: -200%;
-//   background-image: url('../icon/right-arrow.png') !important;
-// }
-
-// .carousel-control-prev-icon {
-//   margin-left: -200%;
-//   background-image: url('../icon/left-arrow.png') !important;
-// }

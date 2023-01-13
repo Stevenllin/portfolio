@@ -1,11 +1,11 @@
 /* About */
 export const AboutData = [
   {
-    icon: 'Laptop',
+    icon: 'Briefcase',
     item: 'Experience',
     number: '2+ years'
   }, {
-    icon: 'Briefcase',
+    icon: 'Laptop',
     item: 'Projects',
     number: '5+'
   }, {
