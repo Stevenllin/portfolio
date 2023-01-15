@@ -7,5 +7,17 @@ export enum IconTextEnum {
   /* Briefcase */
   Briefcase = 'Briefcase',
   /* Activity */
-  Activity = 'Activity'
+  Activity = 'Activity',
+  /* Home  */
+  Home = 'Home',
+  /* About */
+  About = 'About',
+  /* Skills */
+  Skills = 'Skills',
+  /* Projects */
+  Projects = 'Projects',
+  /* Services */
+  Services = 'Services',
+  /* Contact */
+  Contact = 'Contact'
 }

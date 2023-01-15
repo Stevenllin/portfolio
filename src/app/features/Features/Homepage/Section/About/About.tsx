@@ -13,7 +13,7 @@ const About: React.FC = () => {
     commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
   };
   return (
-    <div className="about-container">
+    <div id="about" className="about-container">
       <div className="row">
         <div className="d-flex align-items-center col-md-4 col-5">
           <div className="d-flex align-items-center">

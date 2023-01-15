@@ -5,9 +5,7 @@ import About from './Section/About';
 import Skills from './Section/Skills';
 import Projects from './Section/Projects';
 import Services from './Section/Services';
-// import { motion, AnimatePresence } from "framer-motion";
-// import { InView } from "react-intersection-observer";
-
+import Contact from './Section/Contact';
 
 const Homepage: React.FC = () => {
 
@@ -15,6 +13,7 @@ const Homepage: React.FC = () => {
     <>
       {/* Navigation */}
       <Navigation />
+      <div className="nav-space" />
       {/* Banner */}
       <Banner />
       <div className="space" />
@@ -30,50 +29,8 @@ const Homepage: React.FC = () => {
       {/* Services */}
       <Services />
       <div className="space" />
-
-      {/* About me */}
-      {/* <div className="section-gray">
-        <div className="container-1">
-          <div className="d-flex justify-content-center mb-3">
-            <div className="section-header">
-              About me
-            </div>
-          </div>
-          <div className="row">
-              <div className="col-6">
-                <InView threshold={0.5}>
-                  {({ref, inView}) => (
-                    <motion.img
-                      ref={ref}
-                      initial={{ opacity: 0, x: -100 }}
-                      animate={inView ? { opacity: 1, x: 100 } : { opacity: 0, x: -100 }}
-                      transition={{ duration: 0.8 }}
-                      className="w-60"
-                      src={require('assets/image/S__15106057.jpg')}
-                      alt="steven"
-                    />
-                  )}
-                </InView>
-              </div>
-              <div className="d-flex align-items-center col-6">
-                <InView threshold={0.5}>
-                  {({ ref, inView }) => (
-                    <motion.p
-                      ref={ref}
-                      className="fs-24"
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={inView ? { opacity: 1, x: -100 } : { opacity: 0, x: 100 }}
-                      transition={{ duration: 0.8 }}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo a
-                    </motion.p>
-                  )}
-                </InView>
-              </div>
-          </div>
-        </div>
-      </div> */}
+      <Contact />
+      <div className="space" />
     </>
   )
 }

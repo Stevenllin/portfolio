@@ -1,28 +1,106 @@
-import React from 'react';
-import { NavigationOption } from 'app/core/defines/Homepage';
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import Icon from 'app/common/component/icon/Icon';
+import { NavigationTextEnum } from 'app/core/enums';
+import { Link } from 'react-scroll';
 
 const Navigation: React.FC = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.25 }}
-      className="nav-container"
-    >
-      <ul className="d-flex">
-      {
-        NavigationOption.map((item, index) => (
-          <li
-            key={index}
-            className="fs-xs fc-2 fw-lighter"
-          >
-            {item.text}
-          </li>
-        ))
+  const [active, setActive] = useState<string>('/');
+  const [showNav, setShowNav] = useState<boolean>(false);
+  /**
+   * @description handle select the content
+   * @param target the target of selection
+  */
+  const handleActiveNav = (target: NavigationTextEnum) => {
+    switch (target) {
+      case (NavigationTextEnum.Home): {
+        setActive('/')
+        break;
       }
+      case (NavigationTextEnum.About): {
+        setActive('about')
+        break;
+      }
+      case (NavigationTextEnum.Skills): {
+        setActive('skills')
+        break;
+      }
+      case (NavigationTextEnum.Projects): {
+        setActive('projects')
+        break;
+      }
+      case (NavigationTextEnum.Services): {
+        setActive('services')
+        break;
+      }
+      case (NavigationTextEnum.Contact): {
+        setActive('contact')
+        break;
+      }
+    }
+  }
+  /**
+   * @description handle show the navigation bar
+  */
+  const handleSetTheNavState = () => {
+    if (window.scrollY >= 80) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+  }
+  window.addEventListener('scroll', handleSetTheNavState);
+
+  return (
+    <nav
+      className={showNav ? 'active' : ''}
+    >
+      <ul className="d-flex justify-content-center nav-container">
+        <li
+          className={active === '/' ? 'nav-icon active' : 'nav-icon'}
+        >
+          <Link to="banner" spy={true} smooth={true} offset={-100} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.Home)}  >
+            < Icon name="Home"/>
+          </Link>
+        </li>
+        <li 
+          className={active === 'about' ? 'nav-icon active' : 'nav-icon'}
+        >
+          <Link to="about" spy={true} smooth={true} offset={-100} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.About)} >
+            <Icon name="About" />
+          </Link>
+        </li>
+        <li
+          className={active === 'skills' ? 'nav-icon active' : 'nav-icon'}
+        >
+          <Link to="skills" spy={true} smooth={true} offset={-100} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.Skills)}>
+            <Icon name="Skills" />
+          </Link>
+        </li>
+        <li
+          className={active === 'projects' ? 'nav-icon active' : 'nav-icon'}
+        >
+          <Link to="projects" spy={true} smooth={true} offset={-100} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.Projects)}>
+            <Icon name="Projects" />
+          </Link>
+        </li>
+        <li
+          className={active === 'services' ? 'nav-icon active' : 'nav-icon'}
+          
+        >
+          <Link to="services" spy={true} smooth={true} offset={0} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.Services)}>
+            <Icon name="Services" />
+          </Link>
+        </li>
+        <li
+          className={active === 'contact' ? 'nav-icon active' : 'nav-icon'}
+          
+        >
+          <Link to="contact" spy={true} smooth={true} offset={0} duration={200} onClick={() => handleActiveNav(NavigationTextEnum.Contact)}>
+            <Icon name="Contact" />
+          </Link>
+        </li>
       </ul>
-    </motion.div>
+    </nav>
   );
 }
 

@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
       setSkillsDataState(skillsDataUpdate);
     };
   return (
-    <div className="skills-container">
+    <div id="skills" className="skills-container">
       <InView threshold={0.25}>
         {({ref, inView}) => (
           <motion.div

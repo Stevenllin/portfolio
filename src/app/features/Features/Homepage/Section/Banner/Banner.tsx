@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Banner: React.FC = () => {
   return (
-    <div className="w-100 banner-container">
+    <div id="banner" className="w-100 banner-container">
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -1,5 +1,6 @@
 /* navigation - Text */
 export enum NavigationTextEnum {
+  Home = 'Home',
   /* about me */
   About = 'About me',
   /* skills */
