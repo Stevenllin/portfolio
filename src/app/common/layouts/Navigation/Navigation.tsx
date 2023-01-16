@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Icon from 'app/common/component/icon/Icon';
 import { NavigationTextEnum } from 'app/core/enums';
 import { Link } from 'react-scroll';
@@ -6,6 +6,7 @@ import { Link } from 'react-scroll';
 const Navigation: React.FC = () => {
   const [active, setActive] = useState<string>('/');
   const [showNav, setShowNav] = useState<boolean>(false);
+
   /**
    * @description handle select the content
    * @param target the target of selection
@@ -41,14 +42,21 @@ const Navigation: React.FC = () => {
   /**
    * @description handle show the navigation bar
   */
-  const handleSetTheNavState = () => {
-    if (window.scrollY >= 80) {
-      setShowNav(true);
-    } else {
-      setShowNav(false);
-    }
+  function createScrollStopListener(element: any, callback: any) {
+      let handle: any = null;
+      let onScroll = function() {
+          if (handle) {
+            setShowNav(true);
+            clearTimeout(handle);
+          }
+          handle = setTimeout(callback,  1500);
+      };
+      element.addEventListener('scroll', onScroll);
   }
-  window.addEventListener('scroll', handleSetTheNavState);
+
+  createScrollStopListener(window, function() {
+    setShowNav(false);
+  });
 
   return (
     <nav
