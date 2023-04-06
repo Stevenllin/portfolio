@@ -5,7 +5,7 @@ import LazySpinner from './common/component/Spinner/LazySpinner';
 
 const AppRoutes: React.FC = () => (
   <React.Suspense fallback={<LazySpinner />}>
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter>
       <Switch>
         <Route
           path={ROUTES.FEATURES}
