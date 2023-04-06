@@ -5,5 +5,5 @@ export enum ROUTES {
   /** 各功能頁 (module) */
   FEATURES = '/portfolio',
   /** 首頁 (module) */
-  FEATURES__HOMEPAGE = '/homepage'
+  FEATURES__HOMEPAGE = '/portfolio/homepage'
 }
