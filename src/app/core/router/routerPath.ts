@@ -3,7 +3,7 @@
 */
 export enum ROUTES {
   /** 各功能頁 (module) */
-  FEATURES = '',
+  FEATURES = '/portfolio',
   /** 首頁 (module) */
   FEATURES__HOMEPAGE = '/homepage'
 }
