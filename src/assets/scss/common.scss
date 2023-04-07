@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&family=Noto+Nastaliq+Urdu:wght@700&display=swap');body {
-    font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&family=Noto+Nastaliq+Urdu:wght@700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Variable */
-$base_background_light: #282A29;
-$base_background_dark: #2C2E2D;
-$color_gold: #D6AC86;
-$color_white: #FFFFFF;
+$base_background_light: #282a29;
+$base_background_dark: #2c2e2d;
+$color_gold: #d6ac86;
+$color_white: #ffffff;
 $small: 576px;
 $medium: 769px;
 $large: 992px;
@@ -18,12 +19,15 @@ $largest: 1500px;
 body {
   padding: 0px !important;
   background-color: $base_background_light !important;
+
+  #root {
+    overflow-x: hidden;
+  }
 }
 
 nav {
   background-color: #000000;
   display: none;
-  padding: 1rem 1rem;
   z-index: 2;
   position: fixed;
   left: 50%;
@@ -33,6 +37,11 @@ nav {
   transform: translateX(-50%);
   opacity: 0.5;
 
+  padding: 0.5rem 0.5rem;
+  @media screen and (min-width: $medium) {
+    padding: 1rem 1rem;
+  }
+
   & ul {
     display: flex;
   }
@@ -41,23 +50,23 @@ nav {
     margin: 0px;
   }
 
-  .nav-icon  {
+  .nav-icon {
     background-color: transparent;
-    padding: 0.9rem;
     border-radius: 50%;
     color: $color_white;
     z-index: 3;
     opacity: 1 !important;
+    padding: 0.9rem;
   }
 
   .nav-icon.active {
     color: $color_gold;
   }
-  
+
   & a.active {
-    color: inherit; 
+    color: inherit;
   }
-  
+
   & a .nav-icon.active {
     color: $color_gold !important;
   }
@@ -78,7 +87,7 @@ li {
   color: $color_white;
   font-weight: lighter;
   list-style: none;
-  
+
   @media screen and (min-width: $medium) {
     margin: 15px;
   }
@@ -219,8 +228,15 @@ svg {
 }
 
 .nav-space {
-  height: 60px;
-} 
+  height: 30px;
+  @media screen and (min-width: $medium) {
+    height: 40px;
+  }
+
+  @media screen and (min-width: $larger) {
+    height: 60px;
+  }
+}
 
 .space {
   height: 60px;
@@ -236,7 +252,7 @@ svg {
 
 .line-height {
   line-height: 1rem;
-  
+
   @media screen and (min-width: $medium) {
     line-height: 1.5rem;
   }
@@ -297,7 +313,6 @@ svg {
   background: #000000;
   overflow: hidden;
 
-  
   & img {
     object-fit: cover;
     opacity: 0.45;
@@ -316,7 +331,7 @@ svg {
   @media screen and (min-width: $small) {
     left: 40%;
   }
-  
+
   @media screen and (min-width: $medium) {
     left: 50%;
   }
@@ -335,7 +350,6 @@ svg {
 .about-container {
   width: 90%;
   margin: 0 auto;
-  
 
   & img {
     border-radius: 15px;
@@ -378,21 +392,21 @@ svg {
   cursor: pointer;
 
   p {
-    color: #F5DEC8;
-  } 
+    color: #f5dec8;
+  }
 }
 
 .skills-select.selected {
   p {
     color: $color_gold;
     font-weight: normal;
-  } 
+  }
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  
+
   @media screen and (min-width: $medium) {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -432,7 +446,7 @@ svg {
   @media screen and (min-width: $small) {
     padding: 30px;
   }
-  
+
   @media screen and (min-width: $medium) {
     padding: 40px;
   }
@@ -451,7 +465,7 @@ svg {
   height: 1px;
   width: 10%;
   border-bottom: 2px solid $color_gold;
-  
+
   @media screen and (min-width: $medium) {
     border-bottom: 3px solid $color_gold;
   }
