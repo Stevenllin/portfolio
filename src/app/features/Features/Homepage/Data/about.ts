@@ -3,11 +3,11 @@ export const AboutData = [
   {
     icon: 'Briefcase',
     item: 'Experience',
-    number: '2+ years'
+    number: '< 1 year'
   }, {
     icon: 'Laptop',
     item: 'Projects',
-    number: '5+'
+    number: '4'
   }, {
     icon: 'Activity',
     item: 'Interests',

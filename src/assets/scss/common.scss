@@ -104,6 +104,7 @@ p {
 
 button {
   all: unset;
+  z-index: 9;
 }
 
 canvas {
@@ -263,6 +264,14 @@ svg {
 }
 
 .display-desktop {
+  position: relative;
+
+  @media screen and (min-width: $larger) {
+    display: none !important;
+  }
+}
+
+.display-tablet {
   position: relative;
 
   @media screen and (max-width: $medium) {
@@ -438,7 +447,7 @@ svg {
 }
 
 .service-card {
-  width: 75%;
+  width: 90%;
   padding: 20px;
   background-color: $base_background_dark;
   border-radius: 15px;
@@ -456,7 +465,8 @@ svg {
   }
 
   @media screen and (min-width: $larger) {
-    padding: 80px;
+    padding: 70px;
+    width: 75%;
   }
 }
 
@@ -501,5 +511,31 @@ svg {
 .contact-container {
   width: 90%;
   margin: 0 auto;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  // background-color: $base_background_dark;
+
+  .icons {
+    padding: 15px;
+    border-radius: 100%;
+    // background-color: #3e3b38;
+    cursor: pointer;
+  }
+
+  & svg {
+    color: #f5dec8;
+    &:hover {
+      color: $color_gold;
+    }
+  }
+  @media screen and (min-width: $medium) {
+    margin-top: 50px;
+  }
 }
 /* Contact */

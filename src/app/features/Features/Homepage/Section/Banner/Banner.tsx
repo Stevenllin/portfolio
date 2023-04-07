@@ -11,8 +11,8 @@ const Banner: React.FC = () => {
         transition={{ delay: 0.75 }}
         className="banner-text fs-sm"
       >
-        <p className="d-flex justify-content-end">Hello!!</p>
-        <p className="d-flex justify-content-end align-items-center">
+        <p className="d-flex justify-content-end me-3">Hello!!</p>
+        <p className="d-flex justify-content-end me-3 align-items-center">
           This is 
           <motion.span
             initial={{ color: '#FFFFFF' }}
@@ -23,11 +23,11 @@ const Banner: React.FC = () => {
             Steven Lin
           </motion.span>
         </p>
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end me-3">
           <div className="d-flex align-items-center me-3">
             <Icon name="Dash" />
           </div>
-          <p>A creative Front-end developer</p>
+          <p>A creative and passionate Front-end developer</p>
         </div>
       </motion.div>
       <img
