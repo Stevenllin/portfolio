@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Icon from 'app/common/component/icon/Icon';
 import { NavigationTextEnum } from 'app/core/enums';
 import { Link } from 'react-scroll';

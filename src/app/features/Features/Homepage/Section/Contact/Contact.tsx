@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from 'app/common/component/icon/Icon';
 import { ImLinkedin2 } from 'react-icons/im';
 import { SiGmail } from 'react-icons/si';
 import { FiGithub } from 'react-icons/fi';
 import { ImPhone } from 'react-icons/im';
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
+  const [displatCopiedText, setDisplatCopiedText] = useState<boolean>(false);
+
+  const handleCopyText = (text: string) => {
+    if (displatCopiedText) return
+    navigator.clipboard.writeText(text);
+    setDisplatCopiedText(true);
+  }
+
+  setTimeout(() => {
+    if (displatCopiedText) return setDisplatCopiedText(false)
+  }, 3000);
+
   return (
     <div id="contact" >
       <div className="contact-container">
@@ -21,19 +34,35 @@ const Contact: React.FC = () => {
         </div>
       </div>
       <div className="contact-content">
-        <div className="icons mx-2">
+        <div className="icons mx-2" onClick={() => handleCopyText("0978030930")}>
           <ImPhone />
         </div>
-        <div className="icons mx-2">
+        <div className="icons mx-2" onClick={() => handleCopyText("stevenlin3263@gmail.com")}>
           <SiGmail />
         </div>
         <div className="icons mx-2">
-          <ImLinkedin2 />
+          <a href="https://www.linkedin.com/in/steven-lin-811912220/">
+            <ImLinkedin2 />
+          </a>
         </div>
         <div className="icons mx-2">
-          <FiGithub />
+          <a href="https://github.com/Stevenllin" >
+            <FiGithub />
+          </a>
         </div>
       </div>
+      {
+        displatCopiedText && (
+          <motion.div
+            className="w-100 mt-2"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-center fs-4 fc-1">Copied!!</p>
+          </motion.div>
+        )
+      }
     </div>
   )
 }

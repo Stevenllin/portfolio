@@ -68,7 +68,6 @@ const Projects: React.FC = () => {
                 }
               </div>
             </div>
-
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#projectControlsDesktop" data-bs-slide="prev">
             <span className="carousel-control-prev-icon font-icon" aria-hidden="true"></span>

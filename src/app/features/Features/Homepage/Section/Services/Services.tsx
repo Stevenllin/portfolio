@@ -19,7 +19,7 @@ const Services: React.FC = () => {
           {/** Wrapper for slides */}
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <p className="m-2 fc-2 fs-md text-center fw-light">Web development</p>
+              <p className="m-2 fc-2 fs-md text-center fw-light">Extensive web technologies</p>
               {/**  */}
                 <div className="my-3 service-divider"></div>
               <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
