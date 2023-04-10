@@ -46,11 +46,8 @@ const About: React.FC = () => {
                   <p className="fs-sm fc-1 fw-lighter">Discover</p>
                   <p className="fs-md fc-2 fw-light">About me</p>
                   <div className="line mb-2"/>
-                  {/** 多元的產業經驗 教育經驗 喜歡團隊合作 熱愛研究新的技術  */}
-                  {/** 不害怕挑戰-放棄過去所學 自學軟體 */}
-                  {/** 獨立自主、適應力強-大陸生活 英國留學 */}
-                  {/** 我是一個熱愛學習、勇於挑戰的人，因此，放棄過去所學得專業知識，自學軟體直到現在。除此之外，過去曾在大陸生活過一段時間，後來去英國留學，碰到多變的環境，造就了適應力極強的我 */}
-                  <p className="fs-xs fc-2 line-height fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-mobile">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga.</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-tablet">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga. Although I have less than a year of professional development experience, due to my enthusiasm and personal discipline, I use the remaining time to accumulate a lot of projects.</p>
                 </div>
                 
                 <div className="d-flex justify-content-center">

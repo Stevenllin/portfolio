@@ -22,25 +22,25 @@ const Services: React.FC = () => {
               <p className="m-2 fc-2 fs-md text-center fw-light">Web development</p>
               {/**  */}
                 <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
             </div>
 
             <div className="carousel-item">
               <p className="m-2 fc-2 fs-md text-center fw-light">Diverse industries experiences</p>
               <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter">According to the previous career path, I have approached experience in financial services, e-commerce, e-wallets and live streaming platforms.</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">According to the previous career path, I have approached experience in financial services, e-commerce, e-wallets and live streaming platforms.</p>
             </div>
 
             <div className="carousel-item">
               <p className="m-2 fc-2 fs-md text-center fw-light">Solid knowledge of data structure and algorithms</p>
               <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter">Based on great learning resources from the University of Bristol, I have learned the foundation and importance of data structure and algorithms and kept doing the Leetcode to cultivate my problem-solving skills.</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Based on great learning resources from the University of Bristol, I have learned the foundation and importance of data structure and algorithms and kept doing the Leetcode to cultivate my problem-solving skills.</p>
             </div>
 
             <div className="carousel-item">
               <p className="m-2 fc-2 fs-md text-center fw-light">Basic concept of UI/UX design</p>
               <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter">Due to the user experience plays a vital role on a product, I tried to design my side projects through Figma before developing.</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Due to the user experience plays a vital role on a product, I tried to design my side projects through Figma before developing.</p>
             </div>
           </div>
         </div>
