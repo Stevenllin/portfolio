@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from 'app/common/component/icon/Icon';
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
+import { ProjectsData } from 'app/features/Features/Homepage/Data/projects';
 
 const Projects: React.FC = () => {
   return (
@@ -33,73 +34,41 @@ const Projects: React.FC = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Covid-19 Tracker</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                {
+                  ProjectsData.filter((_, index) => index > 2).map(item => (
+                    <div key={item.name} className="col-md-4">
+                      <div className="projects-card">
+                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt="..." />
+                        <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                        <div className="d-flex my-2">
+                          <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Game center</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                  ))
+                }
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="row">
+                {
+                  ProjectsData.filter((_, index) => index <= 2).map(item => (
+                    <div key={item.name} className="col-md-4">
+                      <div className="projects-card">
+                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt="..." />
+                        <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                        <div className="d-flex my-2">
+                          <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Chat-app</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
-                    </div>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
             </div>
 
-            <div className="carousel-item">
-              <div className="row">
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Covid-19 Tracker</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Game center</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="projects-card">
-                    <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Chat-app</p>
-                    <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#projectControlsDesktop" data-bs-slide="prev">
             <span className="carousel-control-prev-icon font-icon" aria-hidden="true"></span>
@@ -113,26 +82,20 @@ const Projects: React.FC = () => {
         {/* mobile */}
         <div id="projectControlsMobile" className="carousel slide display-mobile" data-bs-ride="carousel">
           <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="projects-card">
-                <img src={require('assets/image/project1.png')} className="d-block w-100" alt="..." />
-                <p className="fs-xs fc-2 fw-lighter my-4">Lorem ipsum dolor sit amet consectet</p>
-                <div className="d-flex my-2">
-                  <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                  <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+            {
+              ProjectsData.map((item, index) => (
+                <div key={item.name} className={'carousel-item' + (index === 0 ? ' active' : '') }>
+                  <div className="projects-card">
+                    <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
+                    <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                    <div className="d-flex my-2">
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
+                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="carousel-item active">
-              <div className="projects-card">
-                <img src={require('assets/image/project2.png')} className="d-block w-100" alt="..." />
-                <p className="fs-xs fc-2 fw-lighter my-4">Lorem ipsum dolor sit amet consectet</p>
-                <div className="d-flex my-2">
-                  <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                  <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
-                </div>
-              </div>
-            </div>
+              ))
+            }
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#projectControlsMobile" data-bs-slide="prev">
             <span className="carousel-control-prev-icon font-icon" aria-hidden="true"></span>
