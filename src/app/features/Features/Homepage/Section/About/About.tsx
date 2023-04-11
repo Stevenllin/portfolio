@@ -4,14 +4,22 @@ import { AboutData } from '../../Data';
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import Icon from 'app/common/component/icon/Icon';
+// import Icon from '../../../../../../../build/resume/Steven.pdf'
 
 const About: React.FC = () => {
+  const env = process.env.NODE_ENV;
+  console.log('env', env);
   /**
    * @description handle download the resume
   */
-   const handleClickDownloadPDF = () => {
-    commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
+  const handleClickDownloadPDF = () => {
+    if (env === 'development') {
+      commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
+    } else {
+      commonService.handleFileSave('../../../../../../../build/resume/Steven.pdf', 'Steven.pdf');
+    }
   };
+
   return (
     <div id="about" className="about-container">
       <div className="row">
