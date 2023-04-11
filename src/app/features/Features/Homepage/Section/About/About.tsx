@@ -47,7 +47,7 @@ const About: React.FC = () => {
                   <p className="fs-md fc-2 fw-light">About me</p>
                   <div className="line mb-2"/>
                   <p className="fs-xs fc-2 line-height fw-lighter display-mobile">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga.</p>
-                  <p className="fs-xs fc-2 line-height fw-lighter display-tablet">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga. Although I have less than a year of professional development experience, due to my enthusiasm and personal discipline, I use the remaining time to accumulate a lot of projects.</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-tablet">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga. Although I have less than a year of professional development experience, due to my enthusiasm and personal discipline, I use the remaining time to accumulate some projects.</p>
                 </div>
                 
                 <div className="d-flex justify-content-center">

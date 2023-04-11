@@ -103,6 +103,11 @@ p {
   }
 }
 
+a {
+  text-decoration: none !important;
+  color: $color_gold !important;
+}
+
 button {
   all: unset;
   z-index: 9;

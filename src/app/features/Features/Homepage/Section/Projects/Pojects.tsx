@@ -38,11 +38,13 @@ const Projects: React.FC = () => {
                   ProjectsData.filter((_, index) => index > 2).map(item => (
                     <div key={item.name} className="col-md-4">
                       <div className="projects-card">
-                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt="..." />
-                        <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
+                        <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                        {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
+                        {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
                           <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1"><a href={item.gitHub}>Git hub</a></button>
                         </div>
                       </div>
                     </div>
@@ -56,11 +58,13 @@ const Projects: React.FC = () => {
                   ProjectsData.filter((_, index) => index <= 2).map(item => (
                     <div key={item.name} className="col-md-4">
                       <div className="projects-card">
-                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt="..." />
-                        <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                        <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
+                        <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                        {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
+                        {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
                           <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1"><a href={item.gitHub}>Git hub</a></button>
                         </div>
                       </div>
                     </div>
@@ -86,7 +90,9 @@ const Projects: React.FC = () => {
                 <div key={item.name} className={'carousel-item' + (index === 0 ? ' active' : '') }>
                   <div className="projects-card">
                     <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
-                    <p className="fs-xs fc-2 fw-lighter my-4">{item.name}</p>
+                    <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                    {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
+                    {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                     <div className="d-flex my-2">
                       <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
                       <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>

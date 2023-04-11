@@ -17,8 +17,9 @@ export const SkillsData = [
     category: 'Back-end',
     isSelected: false,
     itemArray: [
-      { item: 'NodeJS', score: 35 },
-      { item: 'Express', score: 35 },
+      { item: 'NodeJS (Express)', score: 35 },
+      { item: 'Java', score: 35 },
+      { item: 'Laravel (PHP)', score: 35 },
       { item: 'MySQL', score: 40 },
       { item: 'MongoDB', score: 30 },
       { item: 'Socket.io', score: 20 }

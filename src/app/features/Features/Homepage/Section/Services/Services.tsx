@@ -22,7 +22,7 @@ const Services: React.FC = () => {
               <p className="m-2 fc-2 fs-md text-center fw-light">Extensive web technologies</p>
               {/**  */}
                 <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">From RESTful api and relational database design to front and back-end development are slightly understand.</p>
             </div>
 
             <div className="carousel-item">
@@ -34,13 +34,13 @@ const Services: React.FC = () => {
             <div className="carousel-item">
               <p className="m-2 fc-2 fs-md text-center fw-light">Solid knowledge of data structure and algorithms</p>
               <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Based on great learning resources from the University of Bristol, I have learned the foundation and importance of data structure and algorithms and kept doing the Leetcode to cultivate my problem-solving skills.</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Based on great learning resources from the University of Bristol, I have learned the foundation of data structure and algorithms and kept doing the Leetcode to cultivate my problem-solving skills.</p>
             </div>
 
             <div className="carousel-item">
               <p className="m-2 fc-2 fs-md text-center fw-light">Basic concept of UI/UX design</p>
               <div className="my-3 service-divider"></div>
-              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Due to the user experience plays a vital role on a product, I tried to design my side projects through Figma before developing.</p>
+              <p className="mx-2 mt-4 fc-2 fs-sm fw-lighter line-height">Due to the user experience plays a vital role on a product, I tried to design each of my side projects through Figma before developing.</p>
             </div>
           </div>
         </div>
