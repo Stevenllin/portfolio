@@ -4,7 +4,7 @@ import { AboutData } from '../../Data';
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import Icon from 'app/common/component/icon/Icon';
-// import Icon from '../../../../../../../build/resume/Steven.pdf'
+// import Icon from './'
 
 const About: React.FC = () => {
   const env = process.env.NODE_ENV;
@@ -16,7 +16,7 @@ const About: React.FC = () => {
     if (env === 'development') {
       commonService.handleFileSave('/resume/Steven.pdf', 'Steven.pdf');
     } else {
-      commonService.handleFileSave('../../../../../../../build/resume/Steven.pdf', 'Steven.pdf');
+      commonService.handleFileSave(`${process.env.PUBLIC_URL}/resume/Steven.pdf`, 'Steven.pdf');
     }
   };
 
