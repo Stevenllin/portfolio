@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
                     <div key={item.name} className="col-md-4">
                       <div className="projects-card">
                         <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
-                        <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                        <p className="fs-xs fc-2 fw-lighter my-4">Name: {item.name}</p>
                         {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                         {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
                     <div key={item.name} className="col-md-4">
                       <div className="projects-card">
                         <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
-                        <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                        <p className="fs-xs fc-2 fw-lighter my-4">Name: {item.name}</p>
                         {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                         {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
                 <div key={item.name} className={'carousel-item' + (index === 0 ? ' active' : '') }>
                   <div className="projects-card">
                     <img src={require(`assets/image/${item.image}`)} className="d-block w-100" alt={item.name} />
-                    <p className="fs-xs fc-2 fw-lighter my-4">Project Name: {item.name}</p>
+                    <p className="fs-xs fc-2 fw-lighter my-4">Name: {item.name}</p>
                     {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                     {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                     <div className="d-flex my-2">

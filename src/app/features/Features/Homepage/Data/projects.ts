@@ -22,7 +22,7 @@ export const ProjectsData = [
     gitHub: 'https://github.com/Stevenllin/chat-app'
   },
   {
-    name: 'Restaurant-booking-system',
+    name: 'Booking-system',
     image: 'restaurant-booking-system.jpeg',
     tech: ['ReactJS', 'React Redux', 'React Saga', 'TypeSrcipt', 'React Hook Form', 'Bootstrap', 'Yup'],
     demo: '',

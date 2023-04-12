@@ -4,11 +4,9 @@ import { AboutData } from '../../Data';
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import Icon from 'app/common/component/icon/Icon';
-// import Icon from './'
 
 const About: React.FC = () => {
   const env = process.env.NODE_ENV;
-  console.log('env', env);
   /**
    * @description handle download the resume
   */
@@ -24,7 +22,7 @@ const About: React.FC = () => {
     <div id="about" className="about-container">
       <div className="row">
         <div className="d-flex align-items-center col-md-4 col-5">
-          <div className="d-flex align-items-center">
+          <div className="display-tablet-desktop">
             <InView threshold={0.25}>
               {({ref, inView}) => (
                   <motion.img
@@ -35,6 +33,19 @@ const About: React.FC = () => {
                     className="w-100"
                     src={require('assets/image/about.jpg')}
                     alt="banner"
+                  />
+                )}
+            </InView>
+          </div>
+          <div className="w-100 h-100 display-mobile">
+            <InView threshold={0.25}>
+              {({ref, inView}) => (
+                  <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                    transition={{ duration: 0.8 }}
+                    className="w-100 about-background"
                   />
                 )}
             </InView>
@@ -56,12 +67,15 @@ const About: React.FC = () => {
                   <div className="line mb-2"/>
                   <p className="fs-xs fc-2 line-height fw-lighter display-mobile">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga.</p>
                   <p className="fs-xs fc-2 line-height fw-lighter display-tablet">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga. Although I have less than a year of professional development experience, due to my enthusiasm and personal discipline, I use the remaining time to accumulate some projects.</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-desktop">I graduated from the University of Bristol in 2022 with MSc Computer Science and currently work as a front-end developer with a focus on React, React Redux and React Saga.</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-desktop">Although I have less than a year of professional development experience, due to my enthusiasm and personal discipline, I use the remaining time to accumulate some projects.</p>
+                  <p className="fs-xs fc-2 line-height fw-lighter display-desktop">In addition, as a life-lover, I also enjoy a variety of activities, including basketball, marathon running, scuba diving, reading, and the arts.</p>
                 </div>
                 
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center my-4">
                   {
                     AboutData.map((item, index) => (
-                      <div key={index} className="about-data m-2 display-tablet">
+                      <div key={index} className="about-data m-2 display-tablet-desktop">
                         <InView threshold={0.25}>
                           {({ref, inView}) => (
                             <motion.div
