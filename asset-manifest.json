@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1fad33ac.css",
-    "main.js": "/portfolio/static/js/main.e9b3f926.js",
+    "main.css": "/portfolio/static/css/main.8e35f25f.css",
+    "main.js": "/portfolio/static/js/main.aa15960c.js",
     "static/js/913.b7c625bd.chunk.js": "/portfolio/static/js/913.b7c625bd.chunk.js",
     "static/js/651.0b12483f.chunk.js": "/portfolio/static/js/651.0b12483f.chunk.js",
-    "static/js/270.21e25511.chunk.js": "/portfolio/static/js/270.21e25511.chunk.js",
+    "static/js/270.214f5f75.chunk.js": "/portfolio/static/js/270.214f5f75.chunk.js",
     "static/js/697.a8731c36.chunk.js": "/portfolio/static/js/697.a8731c36.chunk.js",
     "static/media/about.jpg": "/portfolio/static/media/about.0210c22b7d9ce3a91b91.jpg",
     "static/media/banner.jpeg": "/portfolio/static/media/banner.f1c198dff9261688b2d3.jpeg",
@@ -14,15 +14,15 @@
     "static/media/chat-app.jpeg": "/portfolio/static/media/chat-app.a75a5873ec3543cc5552.jpeg",
     "static/media/sprojxt.jpeg": "/portfolio/static/media/sprojxt.45e58bb5cf82d7cf4501.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.1fad33ac.css.map": "/portfolio/static/css/main.1fad33ac.css.map",
-    "main.e9b3f926.js.map": "/portfolio/static/js/main.e9b3f926.js.map",
+    "main.8e35f25f.css.map": "/portfolio/static/css/main.8e35f25f.css.map",
+    "main.aa15960c.js.map": "/portfolio/static/js/main.aa15960c.js.map",
     "913.b7c625bd.chunk.js.map": "/portfolio/static/js/913.b7c625bd.chunk.js.map",
     "651.0b12483f.chunk.js.map": "/portfolio/static/js/651.0b12483f.chunk.js.map",
-    "270.21e25511.chunk.js.map": "/portfolio/static/js/270.21e25511.chunk.js.map",
+    "270.214f5f75.chunk.js.map": "/portfolio/static/js/270.214f5f75.chunk.js.map",
     "697.a8731c36.chunk.js.map": "/portfolio/static/js/697.a8731c36.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fad33ac.css",
-    "static/js/main.e9b3f926.js"
+    "static/css/main.8e35f25f.css",
+    "static/js/main.aa15960c.js"
   ]
 }
