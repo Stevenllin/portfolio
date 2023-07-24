@@ -197,6 +197,10 @@ svg {
   color: $color_white;
   border-radius: 5px;
 
+  a {
+    color: $color_white !important;
+  }
+
   @media screen and (min-width: $medium) {
     padding: 7px 14px;
   }
@@ -275,6 +279,15 @@ svg {
   display: none !important;
 
   @media screen and (min-width: $larger) {
+    display: block !important;
+  }
+}
+
+.display-tablet-desktop {
+  position: relative;
+  display: none !important;
+
+  @media screen and (min-width: $medium) {
     display: block !important;
   }
 }

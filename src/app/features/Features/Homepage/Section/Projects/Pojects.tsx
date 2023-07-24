@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
       </div>
       <div className="w-90 mt-4">
         {/* Desktop */}
-        <div id="projectControlsDesktop" className="carousel slide display-tablet" data-bs-ride="carousel">
+        <div id="projectControlsDesktop" className="carousel slide display-tablet-desktop" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
@@ -43,8 +43,8 @@ const Projects: React.FC = () => {
                         {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                         {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
-                          <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1"><a href={item.gitHub}>Git hub</a></button>
+                          {/* <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button> */}
+                          <button className="button-gold fs-xs fc-2 fw-lighter me-1"><a href={item.gitHub}>Git hub</a></button>
                         </div>
                       </div>
                     </div>
@@ -63,8 +63,8 @@ const Projects: React.FC = () => {
                         {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                         {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                         <div className="d-flex my-2">
-                          <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                          <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1"><a href={item.gitHub}>Git hub</a></button>
+                          {/* <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button> */}
+                          <button className="button-gold fs-xs fc-2 fw-lighter me-1"><a href={item.gitHub}>Git hub</a></button>
                         </div>
                       </div>
                     </div>
@@ -94,8 +94,8 @@ const Projects: React.FC = () => {
                     {/* <p className="fs-xs fc-2 fw-lighter mt-4 mb-2">Related technologies:</p> */}
                     {/* <p className="fs-xs fc-2 fw-lighter mb-4">{item.tech.join(', ')}</p> */}
                     <div className="d-flex my-2">
-                      <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button>
-                      <button className="button-outline-gold fs-xs fc-2 fw-lighter ms-1">Git hub</button>
+                      {/* <button className="button-gold fs-xs fc-2 fw-lighter me-1">Live Demo</button> */}
+                      <button className="button-gold fs-xs fc-2 fw-lighter me-1"><a href={item.gitHub}>Git hub</a></button>
                     </div>
                   </div>
                 </div>

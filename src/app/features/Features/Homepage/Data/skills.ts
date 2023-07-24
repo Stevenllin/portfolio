@@ -10,6 +10,7 @@ export const SkillsData = [
       { item: 'ReactJS', score: 65 },
       { item: 'SCSS', score: 60 },
       { item: 'Webpack', score: 30 },
+      { item: 'React Testing Library', score: 30 },
     ]
   },
   /* Back-end */
@@ -33,6 +34,9 @@ export const SkillsData = [
       { item: 'Git', score: 65 },
       { item: 'Figma', score: 60 },
       { item: 'Postman', score: 35 },
+      { item: 'RESTful API', score: 35 },
+      { item: 'GraphQL', score: 35 },
+      { item: 'Docker', score: 30 }
     ]
   }
 ]
